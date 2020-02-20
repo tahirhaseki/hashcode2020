@@ -10,10 +10,12 @@ import java.util.Arrays;
 public class Main {
 
 	public static void main(String[] args) {
+		int countter = 1;
+		//for(int countter = 1;countter < 7;countter++) {
 		String str = "";
 		String[] splitted = null;
 		try {
-			File file = new File("a_example.txt");
+			File file = new File(countter+".txt");
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			str = br.readLine();
 			splitted = str.split(" ");
@@ -40,7 +42,7 @@ public class Main {
 			}
 			Arrays.sort(libraries);
 			try {
-				FileWriter myWriter = new FileWriter("OUTPUT.txt");
+				FileWriter myWriter = new FileWriter("OUTPUT_"+countter+".txt");
 				String output = "";
 				int signedLibraryCount=0;
 				for(int i = 0;i < libraries.length;i++) {
@@ -79,6 +81,8 @@ public class Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Ended");
+		//}
 	}
 	
 	

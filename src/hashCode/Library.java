@@ -11,6 +11,7 @@ package hashCode;
  */
 public class Library implements Comparable<Library>{
 	public static int counter = 0;
+	public double rate;
 	public int ID;
     public Book books[]; 
     public int book_counter;
@@ -22,6 +23,8 @@ public class Library implements Comparable<Library>{
     public double daily_profit;
 
     public Library(int numb_books, int sign_time, int scanper_day) {
+    	//this.rate = scanper_day / sign_time;
+    	
     	this.ID = counter;
     	counter++;
         this.book_counter=0;
@@ -30,6 +33,7 @@ public class Library implements Comparable<Library>{
         this.scanper_day = scanper_day;
         this.need_day = numb_books/scanper_day;
         this.total_day = need_day + sign_time;
+        this.rate = need_day * scanper_day;
         
         //this.daily_profit = total_point/total_day;
         
@@ -103,14 +107,24 @@ public class Library implements Comparable<Library>{
         this.daily_profit = daily_profit;
     }
 
-	@Override
+	/*@Override
 	public int compareTo(Library o) {
 	    if(this.daily_profit<o.daily_profit)
 	          return 1;
 	    else if(o.daily_profit<this.daily_profit)
 	          return -1;
 	    return 0;
+	}*/
+	
+	@Override
+	public int compareTo(Library o) {
+	    if(this.rate<o.rate)
+	          return 1;
+	    else if(o.rate<this.rate)
+	          return -1;
+	    return 0;
 	}
+    
     
     
 }

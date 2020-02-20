@@ -8,7 +8,6 @@ public class Main {
 		// Test comment
 		// Test2 comment
 		// test3 ee
-		System.out.println("tahir bey");
 	}
 
 }

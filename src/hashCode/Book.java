@@ -30,14 +30,6 @@ public class Book implements Comparable<Book>{
 	    else if(o.point<this.point)
 	          return -1;
 	    return 0;
-	}
-
-	
-	/*public Book(int point) {
-		super();
-		this.point = point;
-		
-	}*/
-	
+	} 
 	
 }

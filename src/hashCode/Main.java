@@ -11,7 +11,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		int countter = 1;
-		//for(int countter = 1;countter < 7;countter++) {
 		String str = "";
 		String[] splitted = null;
 		try {
@@ -50,7 +49,6 @@ public class Main {
 			    		signedLibraryCount++;
 			    		output += libraries[i].ID + " " + libraries[i].book_counter+"\n";
 			    		for(int j = 0;j < libraries[i].books.length;j++) {
-			    			// BOŞLUK KONTROL EDİLEBİLİR
 			    			output += libraries[i].books[j].ID + " ";
 			    		}
 			    		output += "\n";
@@ -82,7 +80,6 @@ public class Main {
 			e.printStackTrace();
 		}
 		System.out.println("Ended");
-		//}
 	}
 	
 	
